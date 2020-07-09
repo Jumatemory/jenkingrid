@@ -8,10 +8,11 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         glue = "step_definitions",
-        features = "src/test/resources/login.feature",
+        features = "src/test/resources",
         dryRun = false,
         strict = true,
-        tags = "@login"
+        tags = "@account"
+
 
         //,
 //        plugin = {

@@ -59,8 +59,12 @@ public class LoginPage {
 
     }
     public String getTitleText(){
+        BrowserUtilities.wait(30);
+        wait.until(ExpectedConditions.visibilityOf(title));
+        BrowserUtilities.wait(6);
 
         return title.getText();
+
     }
 
     public String getTextAlreadyHaveAnAccountLink(){
