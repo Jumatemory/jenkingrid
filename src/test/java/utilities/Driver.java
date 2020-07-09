@@ -33,7 +33,7 @@ public class Driver {
     public synchronized static WebDriver getDriver() {
         String GRID_URL = "http://ec2-54-81-11-123.compute-1.amazonaws.com:4444/wd/hub";
         //if webdriver object doesn't exist
-        //create it
+        //create it  ec2-54-81-11-123.compute-1.amazonaws.com
         if (driverPool.get() == null) {
             //specify browser type in configuration.properties file
             String browser = ConfigurationReader.getProperty("browser").toLowerCase();
