@@ -37,25 +37,30 @@ public class LoginPage {
     public void clickONDoNotHaveLInk(){
 
         accountCreationLink.click();
+        BrowserUtilities.wait(10);
     }
     public void setEmail(String email){
         emailField.sendKeys(email);
+        BrowserUtilities.wait(10);
     }
     public void setName(String name){
 
         nameField.sendKeys(name);
+        BrowserUtilities.wait(10);
     }
     public void setPassword(String password){
         passwordField.sendKeys(password);
     }
     public void setConfirmPassword(String conPassword){
         confirmPassword.sendKeys(conPassword);
+        BrowserUtilities.wait(10);
 
     }
     public void clickONSignUpButton(){
         BrowserUtilities.waitForPageToLoad(20);
         wait.until(ExpectedConditions.elementToBeClickable(signUpButton));
         signUpButton.click();
+        BrowserUtilities.wait(10);
 
     }
     public String getTitleText(){
@@ -70,7 +75,7 @@ public class LoginPage {
     public String getTextAlreadyHaveAnAccountLink(){
         BrowserUtilities.waitForPageToLoad(20);
         wait.until(ExpectedConditions.visibilityOf(alreadyHaveAccountLink));
-        BrowserUtilities.wait(6);
+        BrowserUtilities.wait(10);
         return alreadyHaveAccountLink.getText();
     }
 }
